@@ -3,14 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead:
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# 2012/04/14 Add
+gem 'active_record_deprecated_finders', :git => 'git://github.com/rails/active_record_deprecated_finders.git'
+
 group :development, :test do
   gem 'sqlite3'
 end
-
-# group :production do
-#   gem 'pg'
-#   gem 'thin'
-# end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,8 +30,9 @@ gem 'jquery-rails'
 # For Heroku
 group :production do
   gem 'pg'
-  gem 'thin'
 end
+
+gem 'thin'
 
 # Utility
 gem 'kaminari'
